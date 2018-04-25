@@ -1,0 +1,745 @@
+@import url(reset.css)
+
+@font-face
+	font-family 'Mina-Regular'
+	font-display block
+	src: url('../font/Mina-Regular.eot'); 
+	src: url('../font/Mina-Regular.eot?#iefix') format('embedded-opentype'), 
+		url('../font/Mina-Regular.woff') format('woff'), 
+		url('../font/Mina-Regular.ttf') format('truetype'), 
+		url('../font/Mina-Regular.svg#fontname') format('svg'); 
+@font-face
+	font-family 'Oxygen-Regular'
+	font-display block
+	src: url('../font/Oxygen-Regular.eot'); 
+	src: url('../font/Oxygen-Regular.eot?#iefix') format('embedded-opentype'), 
+		url('../font/Oxygen-Regular.woff') format('woff'), 
+		url('../font/Oxygen-Regular.ttf') format('truetype'), 
+		url('../font/Oxygen-Regular.svg#fontname') format('svg'); 
+@font-face
+	font-family 'PT_Sans-Narrow-Web-Regular'
+	font-display block
+	src: url('../font/PT_Sans-Narrow-Web-Regular.eot'); 
+	src: url('../font/PT_Sans-Narrow-Web-Regular.eot?#iefix') format('embedded-opentype'), 
+		url('../font/PT_Sans-Narrow-Web-Regular.woff') format('woff'), 
+		url('../font/PT_Sans-Narrow-Web-Regular.ttf') format('truetype'), 
+		url('../font/PT_Sans-Narrow-Web-Regular.svg#fontname') format('svg'); 
+@font-face
+	font-family 'PT_Sans-Web-Regular'
+	font-display block
+	src: url('../font/PT_Sans-Web-Regular.eot'); 
+	src: url('../font/PT_Sans-Web-Regular.eot?#iefix') format('embedded-opentype'), 
+		url('../font/PT_Sans-Web-Regular.woff') format('woff'), 
+		url('../font/PT_Sans-Web-Regular.ttf') format('truetype'), 
+		url('../font/PT_Sans-Web-Regular.svg#fontname') format('svg'); 
+@font-face
+	font-family 'Mina-Regular'
+	font-display block
+	src: url('../font/RobotoCondensed-Regular.eot'); 
+	src: url('../font/RobotoCondensed-Regular.eot?#iefix') format('embedded-opentype'), 
+		url('../font/RobotoCondensed-Regular.woff') format('woff'), 
+		url('../font/RobotoCondensed-Regular.ttf') format('truetype'), 
+		url('../font/RobotoCondensed-Regular.svg#fontname') format('svg'); 
+
+body
+	font-size 16px
+	font-family arial
+	background url('../img/main-bg_01.jpg') center 0/auto 700px no-repeat,
+		url('../img/main-bg_02.jpg') center 700px*1/auto 700px no-repeat,
+		url('../img/main-bg_03.jpg') center 700px*2/auto 700px no-repeat,
+		url('../img/main-bg_04.jpg') center 700px*3/auto 700px no-repeat,
+		url('../img/main-bg_05.jpg') center 700px*4/auto 700px no-repeat,
+		url('../img/main-bg_06.jpg') center 700px*5/auto 700px no-repeat,
+		url('../img/main-bg_07.jpg') center 700px*6/auto 700px no-repeat,
+		url('../img/main-bg_08.jpg') center 700px*7/auto 700px no-repeat,
+		url('../img/main-bg_09.jpg') center 700px*8/auto 700px no-repeat,
+		url('../img/main-bg_10.jpg') center 700px*9/auto 700px no-repeat,
+		url('../img/main-bg_11.jpg') center 700px*10/auto 700px no-repeat,
+		url('../img/main-bg_12.jpg') center 700px*11/auto 700px no-repeat,
+		url('../img/main-bg_13.jpg') center 700px*12/auto 700px no-repeat,
+		url('../img/main-bg_14.jpg') center 700px*13/auto 700px no-repeat,
+		url('../img/main-bg_15.jpg') center 700px*14/auto 700px no-repeat,
+		url('../img/main-bg_16.jpg') center 700px*15/auto 700px no-repeat,
+		url('../img/main-bg_17.jpg') center 700px*16/auto 700px no-repeat,
+		url('../img/main-bg_18.jpg') center 700px*17/auto 700px no-repeat,
+		url('../img/main-bg_19.jpg') center 700px*18/auto 700px no-repeat,
+		url('../img/main-bg_20.jpg') center 700px*19/auto 700px no-repeat,
+		#000 url('../img/main-bg_21.jpg') center 80px+700px*19/auto 80px no-repeat;
+	height 80px+700px*19
+	max-width 1920px
+	margin 0 auto
+	
+.header
+	.brand
+		padding-left 85px
+		transition 0.3s
+		@media(max-width 1000px)
+			padding-left 0
+			height 80px
+		img
+			height 100%
+	.w1300
+		@media(max-width 1300px)
+			width 100%
+	.nav
+		padding-top 80px
+		font-family 'Oxygen-Regular'
+		line-height 52px
+		font-size 20px
+		color #3e85aa
+		transition 0.3s
+		@media(max-width 1300px)
+			padding-top 0
+			width 100%
+			text-align center
+			display -webkit-flex
+			display -moz-flex
+			display -ms-flex
+			display -o-flex
+			display flex
+			overflow-x scroll
+			justify-content center
+			&::-webkit-scrollbar
+				display none
+		@media(max-width 800px)
+			justify-content flex-start
+		a
+			float left
+			margin-right 22px
+			transition 0.3s
+			@media(max-width 1300px)
+				float none
+			&:hover
+			&.active
+				font-weight bold
+				color #fff
+	.country-selection
+		padding-top 80px
+		margin 0 20px 0 100px
+		position relative
+		transition 0.3s
+		@media(max-width 1300px)
+			position absolute
+			right 100px
+			top 0
+		@media(max-width 1000px)
+			right 0
+			padding-top 14px
+			margin 0 15px 0 0
+		.item
+			position relative
+			padding-left 70px
+			padding-right 30px
+			height 52px
+			line-height 52px
+			font-family 'Oxygen-Regular'
+			font-weight lighter
+			font-size 20px
+			color #fff
+			background url() left center no-repeat
+			cursor pointer
+			&:after
+				content ""
+				position absolute
+				right 0
+				top 0
+				bottom 0
+				width 15px
+				background url('../img/Layer5.png') right center/13px auto no-repeat
+		.option
+			position absolute
+			top 80px+52px
+			left 0
+			right 0
+			background #000
+			display none
+			span
+				display block
+				padding-right 30px
+				margin 5px 0
+				text-align right
+				font-size 20px
+				color #fff
+				text-transform uppercase
+				line-height 1.5
+				font-weight lighter
+				cursor pointer
+
+
+.w
+	max-width 1800px
+	margin 0 auto
+	h3
+		font-size 46px
+		color #fff
+		font-family Mina-Regular	
+		@media(max-width 700px)
+			font-size 36px	
+
+.main
+	.first
+		text-align center
+		h3
+			padding-top 230px
+			padding-bottom 60px
+			text-align right
+			font-family 'Mina-Regular'
+			font-size 90px
+			color #fff
+			line-height 1
+			font-weight bold
+			transition 0.3s
+			@media(max-width 1000px)
+				padding-top 100px
+				text-align center
+				font-size 50px
+			span
+				color #00eaff
+				text-shadow 2px 2px 20px #00eaff,
+				-2px -2px 20px #00eaff
+		p
+			font-size 30px
+			color #fff
+			line-height 40px
+			font-family 'Mina-Regular'
+			transition 0.3s
+			@media(max-width 1000px)
+				font-size 28px
+				line-height 30px
+		a
+			display block
+			margin 0 auto
+			margin-top 70px
+			max-width 308px
+			width 90%
+			height 86px
+			font-size 30px
+			color #fff
+			font-weight bold
+			line-height 86px
+			font-family 'Mina-Regular'
+			border 2px solid #fff
+			border-radius 43px
+			transition 0.3s
+			@media(max-width 1000px)
+				max-width 200px
+				line-height 50px
+				height 50px
+				font-size 20px
+		.pic
+			padding 100px 0
+			img
+				max-width 830px
+				width 90%
+	.second
+		padding-top 80px
+		text-align center
+		transition 0.3s
+		@media(max-width 600px)
+			padding-top 0
+		.pic
+			margin-top 140px
+			height 250px
+			background url() center center no-repeat
+			transition 0.3s
+			@media(max-width 600px)
+				margin-top 60px
+		h4
+			padding 10px 0 40px
+			font-size 36px
+			color #7fcfe9
+			font-family Mina-Regular
+			transition 0.3s
+			@media(max-width 600px)
+				padding-top 20px
+				font-size 30px
+		p
+			padding-bottom 20px
+			font-size 26px
+			color #acbabf
+			line-height 1.5
+			text-align left
+			@media(max-width 600px)
+				font-size 20px
+	.third
+		padding 250px 0 150px
+		transition 0.3s
+		@media(max-width 1200px)
+			padding 100px 0
+		.row
+			display -webkit-flex
+			display -moz-flex
+			display -ms-flex
+			display -o-flex
+			display flex
+			align-items center
+			@media(max-width 1200px)
+				display block
+		.pic
+			img
+				width 90%
+				display block
+				&.m0-auto
+					margin 0 auto
+				&.w322
+					max-width 322px
+				&.w846
+					max-width 846px
+					transition 0.3s
+					@media(max-width 1200px)
+						margin 100px auto 0
+	.fourth
+		padding-top 100px
+		@media(max-width 1600px) and (min-width 1199.99px)
+			.col-lg-8
+				width 100%
+		@media(max-width 930px)
+			padding-top 0
+		.pic
+			padding-bottom 60px
+			transition 0.3s
+			@media(max-width 1200px)
+				padding-top 20px
+			@media(max-width 930px)
+				padding 50px 0
+			img
+				display block
+				max-width 220px
+				margin 0 auto
+				width 90%
+		.download
+			display block
+			max-width 300px
+			width 90%
+			height 80px
+			margin 0 auto
+			font-size 30px
+			color #fff
+			line-height 80px
+			text-align center
+			font-family Mina-Regular
+			border 2px solid #fff
+			border-radius 40px
+			@media(max-width 1000px)
+				max-width 200px
+				line-height 50px
+				height 50px
+				font-size 20px
+		p
+			font-size 34px
+			color #7fcfe9
+			line-height 2
+			text-align left
+			font-family Mina-Regular
+			@media(max-width 930px)
+				font-size 26px
+		.tips
+			padding 80px 0 45px
+			line-height 1
+			font-size 30px
+			color #acbabf
+			font-family Mina-Regular
+			@media(max-width 930px)
+				padding 30px 0
+				font-size 26px
+		.nav
+			@media(max-width 768px)
+				display -webkit-flex
+				display -moz-flex
+				display -ms-flex
+				display -o-flex
+				display flex
+				justify-content center
+			a
+				float left
+				padding 20px 0
+				width 50px
+				font-size 30px
+				color #acbabf
+				line-height 1
+				font-family Mina-Regular
+				text-align center
+				border-bottom 2px solid transparent
+				transition 0.3s
+				@media(max-width 930px)
+					font-size 26px
+					padding 10px 0
+				&+a
+					margin-left 50px
+					@media(max-width 930px)
+						margin-left 10px
+				&:hover
+				&.active
+					color #fff
+					font-weight bold
+					border-bottom-color #fff
+	.fifth
+		text-align center
+		h3
+			padding 200px 0 200px
+			transition 0.3s
+			@media(max-width 1100px)
+				padding 100px 0
+		.row
+			display -webkit-flex
+			display -moz-flex
+			display -ms-flex
+			display -o-flex
+			display flex
+			align-items center
+			@media(max-width 1600px)
+				display block
+		.col-lg-8
+		.col-lg-4
+			@media(max-width 1600px) and (min-width 1199.99px)
+				width 100%
+		.pic
+			transition 0.3s
+			@media(max-width 1600px)
+				padding-bottom 50px
+			img
+				display block
+				margin 0 auto
+				max-width 1200px
+				width 90%
+				@media(max-width 1600px)
+					max-width 1000px
+		p
+			font-size 30px
+			color #acbabf
+			line-height 2
+			text-align left
+			font-family Mina-Regular
+			@media(max-width 1600px)
+				max-width 1000px
+				margin 0 auto
+				font-size 28px
+				line-height 1.5
+			&+p
+				padding-top 20px
+	.sixth
+		h3
+			padding 300px 0 300px
+			text-align center
+			transition 0.3s
+			@media(max-width 1400px)
+				padding 100px 0
+		.year
+		.item
+		.pic
+			height 165px
+			padding-top 40px
+			display -webkit-flex
+			display -moz-flex
+			display -ms-flex
+			display -o-flex
+			display flex
+			align-items center
+			justify-content flex-start
+			font-family Mina-Regular
+			transition 0.3s
+		.year
+			justify-content center
+			@media(max-width 992px)
+				height 50px
+				padding-top 0
+			span
+				display block
+				font-size 30px
+				color #7fcfe9
+				line-height 1
+				padding 10px
+				border-bottom 2px solid transparent
+				transition 0.3s
+			&.active
+				span
+					border-bottom-color #fff
+		.item
+			@media(max-width 992px)
+				height auto
+				padding 20px 0
+				text-align center
+				justify-content center
+		.pic
+			background url('../img/Group4.png') 0 center no-repeat
+		for attr in 0..6
+			.pic-{attr + 1}
+				background-position center attr*-205px
+			if attr = 5
+				.pic-{attr + 1}
+					padding-bottom 60px
+					@media(max-width 992px)
+						padding-bottom 0
+		.item
+			font-size 30px
+			color #fff
+			line-height 1.5
+		@media(max-width 992px)
+			.pic-1
+				background-position center -10px
+			.pic-2
+				background-position center -221px
+			.pic-3
+				background-position center -432px
+			.pic-4
+				background-position center -635px
+			.pic-5
+				background-position center -843px
+			.pic-6
+				background-position center -1054px
+	.seventh
+		text-align center
+		h3
+			padding 100px 0 250px
+			transition 0.3s
+			@media(max-width 1200px)
+				padding 50px 0
+		.list
+			a
+				font-family Mina-Regular
+				font-size 40px
+				color #fff
+				line-height 2
+				transition 0.3s
+				@media(max-width 900px)
+					font-size 30px
+	.eighth
+		text-align center
+		h3
+			padding 300px 0 130px
+			transition 0.3s
+			@media(max-width 1200px)
+				padding 50px 0 0
+		.item
+			padding-top 110px
+			max-width 250px
+			width 90%
+			margin 0 auto
+			transition 0.3s
+			@media(max-width 1200px)
+				padding-top 50px
+			.pic
+				display block
+				img
+					display block
+					width 100%
+			h4
+				padding-top 30px
+				font-size 30px
+				color #fff
+				font-family Mina-Regular
+				font-weight bold
+				transition 0.3s
+				@media(max-width 700px)
+					font-size 26px
+					padding-top 10px
+			p
+				padding-top 20px
+				font-size 30px
+				color #fff
+				line-height 2
+				transition 0.3s
+				@media(max-width 700px)
+					font-size 20px
+					padding-top 10px
+	.ninth
+		text-align center
+		h3
+			padding 180px 0 70px
+			transition 0.3s
+			@media(max-width 1200px)
+				padding 50px 0 0
+		.pic
+			display block
+			max-width 200px
+			width 90%
+			margin 130px auto 0
+			transition 0.3s
+			@media(max-width 1200px)
+				margin-top 100px
+			img
+				display block
+				width 100%
+	.tenth
+		h3
+			padding 230px 0 100px
+			text-align center
+			transition 0.3s
+			@media(max-width 1200px)
+				padding 100px 0 50px
+		.form
+			padding 40px 58px
+			background #172132
+			transition 0.3s
+			@media(max-width 768px)
+				padding 15px
+			input
+				padding 20px 0 20px 30px
+				line-height 50px
+				font-size 26px
+				border none
+				outline none
+				font-family Mina-Regular
+				transition 0.3s
+				@media(max-width 1040px)
+					width 100%!important
+					box-sizing border-box
+					font-size 20px
+					line-height 30px
+					padding-top 10px
+					padding-bottom 10px
+					padding-left 10px
+			.text
+				width 70%
+				box-sizing border-box
+				color #757575
+				font-family Mina-Regular
+				&::placeholder
+					font-family Mina-Regular
+			.submit
+				padding 20px 0
+				width 29%
+				color #fff
+				text-align center
+				font-family Mina-Regular
+				background #ee9e27
+				transition 0.3s
+				@media(max-width 1040px)
+					margin-top 10px
+					padding-top 10px
+					padding-bottom 10px
+	.eleventh
+		h3
+			padding 160px 0 70px
+			text-align center
+			transition 0.3s
+			@media(max-width 1200px)
+				padding 50px 0
+		.control
+			display -webkit-flex
+			display -moz-flex
+			display -ms-flex
+			display -o-flex
+			display flex
+			justify-content space-between
+			padding-bottom 44px
+			transition 0.3s
+			@media(max-width 768px)
+				padding-bottom 15px
+			a
+				height 83px
+				padding 0 10px
+				font-size 36px
+				color #fff
+				line-height 83px
+				font-family Mina-Regular
+				border-bottom 1px solid transparent
+				transition 0.3s
+				@media(max-width 768px)
+					font-size 20px
+					padding 0
+					line-height 40px
+					height 40px
+				&:hover
+				&.active
+					border-color #fff
+		.item
+			padding-top 30px
+			transition 0.3s
+			@media(max-width 768px)
+				padding-top 15px
+			h4
+				position relative
+				font-size 30px
+				color #7fcfe9
+				line-height 76px
+				font-family Mina-Regular
+				border-bottom 1px solid #3d3553
+				transition 0.3s
+				@media(max-width 768px)
+					font-size 20px
+					line-height 40px
+				&:after
+					content ""
+					position absolute
+					right 0
+					top 0
+					bottom 0
+					width 40px
+					background url('../img/图层1_69.png') center center/100% auto no-repeat
+					transition 0.3s
+					@media(max-width 768px)
+						width 20px
+						
+					
+				
+
+.footer
+	padding 700px 0 70px
+	transition 0.3s
+	@media(max-width 768px)
+		padding-top 100px
+		padding-bottom 20px
+	.df
+		display -webkit-flex
+		display -moz-flex
+		display -ms-flex
+		display -o-flex
+		display flex
+		justify-content space-between
+		align-items center
+		transition 0.3s
+		@media(max-width 1700px)
+			flex-direction column
+	.link-us
+		display -webkit-flex
+		display -moz-flex
+		display -ms-flex
+		display -o-flex
+		display flex
+		a
+			margin 0 3px
+			width 48px
+			height 48px
+			background url('../img/Layer23.png') left center no-repeat
+			transition 0.3s
+			@media(max-width 1700px)
+				margin 0 10px
+			&:nth-child(2)
+				background-position -56px*1 center
+			&:nth-child(3)
+				background-position -56px*2 center
+			&:nth-child(4)
+				background-position -56px*3 center
+	.copy-right
+		font-size 30px
+		color #fff
+		line-height 48px
+		transition 0.3s
+		@media(max-width 1700px)
+			text-align center
+			span
+				transition 0.3s
+				margin 30px 0
+				display block
+				
+		@media(max-width 768px)
+			font-size 16px
+			line-height 20px
+			span
+				margin 15px 0
+		a
+			color #7fcfe9
+			padding 0 20px
+	.fly
+		display block
+		max-width 134px
+		width 100%
+		transition 0.3s
+		img
+			display block
+			width 100%
+		@media(max-width 1700px)
+			margin-top 10px
+			max-width 100px
+		
