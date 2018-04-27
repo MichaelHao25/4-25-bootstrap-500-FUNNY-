@@ -2,8 +2,6 @@
 // 插件的主要文件
 
 var smushit = require('gulp-smushit');
-
-
 // var imagemin = require('gulp-imagemin');
 // var jpegtran = require('imagemin-jpegtran');
 // var pngquant = require('imagemin-pngquant');
@@ -44,11 +42,12 @@ var pxtorem = require('postcss-pxtorem');
 //     discardComments: true
 // });
 // 以上是引用。。压缩代码
-var rename = require('gulp-rename')
+// var rename = require('gulp-rename')
 
 var base64 = require('gulp-base64');
 // base64
 
+var images_rename = require('./module/images_rename');
 
 var browserSync = require('browser-sync').create();
 var reload = browserSync.reload;
@@ -58,8 +57,6 @@ function swallowError(error) {
 
     this.emit('end')
 }
-
-
 gulp.task('serve', ['css'], function() {
 
     browserSync.init({
@@ -86,20 +83,23 @@ gulp.task('css', function() {
         //  rootValue: 2,
         //  replace: true,
         //  unitPrecision:5,
-        //   propWhiteList: []
+        //   propWhiteList: [],
+        //   minPixelValue: 0
         // }),
         // pxtorem({
         //     rootValue: 100,
         //     replace: true,
         //     unitPrecision: 5,
         //     propList: ['*'],
+        //     minPixelValue: 2
         // }),
         // wap
         // pxtorem({
         //     rootValue: 20,
         //     replace: false,
         //     unitPrecision: 5,
-        //     propList: ['*', '!border']
+        //     propList: ['*', '!border'],
+        //     minPixelValue: 2
         //     // propList需要进行pxtorem进行转换的元素“*”代表所有的
         // }),
         // bootstrap
@@ -119,7 +119,7 @@ gulp.task('css', function() {
         .pipe(sourcemaps.init())
         // .pipe(postcss(processors))
         .pipe(stylus({
-            // compress: true,
+            compress: true,
             use: [
                 poststylus(processors)
             ]
@@ -133,7 +133,7 @@ gulp.task('css', function() {
             maxImageSize: 20 * 1024, // bytes 
             debug: true
         }))
-        .pipe(sourcemaps.write())
+        .pipe(sourcemaps.write("./"))
         .pipe(gulp.dest("./css/"))
         .pipe(reload({
             stream: true
@@ -143,38 +143,16 @@ gulp.task('css', function() {
         });
 });
 
+gulp.task('t_images_rename', function() {
+    images_rename(__dirname);
+    return 0;
+})
 
-gulp.task('default', ['serve']);
+gulp.task('default', ['serve', 't_images_rename']);
 
 // gulp.task('watch', function() {
 //   gulp.watch(['input/*.css'], ['css']);
 // });
-gulp.task('build', function() {
-    return gulp.src('./*.html')
-        .pipe(base64({
-            baseDir: 'public',
-            extensions: ['svg', 'png', /\.jpg#datauri$/i],
-            exclude: [/\.server\.(com|net)\/dynamic\//, '--live.jpg'],
-            maxImageSize: 20 * 1024, // bytes,
-            deleteAfterEncoding: false,
-            debug: true
-        }))
-        // .pipe(rename({
-        //     dirname: "",
-        //     basename: "index",
-        //     prefix: "base64-",
-        //     suffix: "-new",
-        //     extname: ".html"
-        // }))
-        .pipe(rename(function(path) {
-            console.log(path)
-            path.dirname += "/ciao";
-            path.basename += "-goodbye";
-            path.extname = ".md"
-        }))
-        // console('output pass')
-        .pipe(gulp.dest('./'));
-});
 
 
 
